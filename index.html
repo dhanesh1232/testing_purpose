@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Widget Test Landing Page</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+        color: #111827;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        margin-bottom: 2rem;
+        color: #4b5563;
+      }
+
+      .test-area {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        width: min(90%, 500px);
+      }
+
+      footer {
+        position: absolute;
+        bottom: 1rem;
+        font-size: 0.875rem;
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="test-area">
+      <h1>Welcome to Widget Test Page</h1>
+      <p>This page is built to test your widget integration.</p>
+
+      <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+      <script src="http://localhost:3000/index.umd.js"></script>
+      <script>
+        window.ECODrIx.init({
+          botUrl: "https://app.ecodrix.com/widget-frame", // 👈 replace with your chatbot URL
+          bubbleIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-icon"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>`,
+          bubbleColor: "#4f46e5",
+          tooltipText: "Chat with ECODrIx!",
+          autoOpen: 0, // set >0 for seconds delay to auto-open
+          bubbleSize: 40,
+        });
+      </script>
+    </div>
+
+    <footer>© 2025 ECODrIx • Widget Testing Sandbox</footer>
+  </body>
+</html>
